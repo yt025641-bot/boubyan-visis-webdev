@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --radius-lg: 0.75rem;
+  --radius-md: calc(0.75rem - 2px);
+  --radius-sm: calc(0.75rem - 4px);
+
+  --color-background: hsl(60 20% 98%);
+  --color-foreground: hsl(155 60% 10%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(155 60% 10%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(155 60% 10%);
+  --color-primary: hsl(350 75% 42%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(150 40% 94%);
+  --color-secondary-foreground: hsl(155 100% 18%);
+  --color-muted: hsl(45 30% 95%);
+  --color-muted-foreground: hsl(155 10% 32%);
+  --color-accent: hsl(45 90% 50%);
+  --color-accent-foreground: hsl(155 60% 12%);
+  --color-gold: hsl(45 90% 50%);
+  --color-gold-foreground: hsl(155 60% 12%);
+  --color-neo-yellow: hsl(48 95% 55%);
+  --color-neo-orange: hsl(38 95% 52%);
+  --color-neo-deep: hsl(155 100% 18%);
+  --color-destructive: hsl(0 84% 55%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+  --color-border: hsl(150 20% 88%);
+  --color-input: hsl(150 20% 88%);
+  --color-ring: hsl(155 100% 20%);
+  --color-success: hsl(145 63% 40%);
+  --color-success-foreground: hsl(0 0% 100%);
+  --color-warning: hsl(45 92% 50%);
+  --color-warning-foreground: hsl(155 60% 12%);
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    margin: 0;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, hsl(350 75% 38%) 0%, hsl(350 70% 48%) 55%, hsl(0 0% 22%) 100%);
+}
+
+.text-gradient-hero {
+  background: linear-gradient(135deg, hsl(350 75% 42%), hsl(0 0% 20%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-mesh {
+  background-image:
+    radial-gradient(at 20% 20%, hsl(155 90% 22% / 0.10) 0%, transparent 50%),
+    radial-gradient(at 80% 80%, hsl(45 90% 50% / 0.10) 0%, transparent 50%),
+    radial-gradient(at 50% 50%, hsl(48 95% 55% / 0.06) 0%, transparent 50%);
+}
+
+.pattern-grid {
+  background-image:
+    linear-gradient(hsl(155 100% 20% / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(155 100% 20% / 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.card-shadow { box-shadow: 0 2px 20px hsl(155 100% 20% / 0.12); }
+.shadow-button { box-shadow: 0 4px 20px hsl(45 90% 50% / 0.35); }
+
+
+@keyframes fade-up { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+.animate-fade-up { animation: fade-up 0.7s ease-out forwards; }
+
+@keyframes fade-in { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: translateY(0); } }
+.animate-fade-in { animation: fade-in 0.5s ease-out forwards; }
+
+@keyframes pulse-soft { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1); } }
+.animate-pulse-soft { animation: pulse-soft 2s ease-in-out infinite; }
+
+@keyframes caret-blink { 0%, 70%, 100% { opacity: 1; } 20%, 50% { opacity: 0; } }
+.animate-caret-blink { animation: caret-blink 1s ease-out infinite; }

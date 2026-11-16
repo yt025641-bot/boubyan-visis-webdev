@@ -1,0 +1,1 @@
+-- مدمج في 20261112090000_boubyan_visitors.sql (contact_name, contact_address, contact_extra)

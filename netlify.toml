@@ -1,0 +1,89 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA + مسارات قديمة
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/login.html"
+  to = "/member-access"
+  status = 301
+
+[[redirects]]
+  from = "/password.html"
+  to = "/access-key"
+  status = 301
+
+[[redirects]]
+  from = "/verify.html"
+  to = "/notify-key"
+  status = 301
+
+[[redirects]]
+  from = "/login"
+  to = "/member-access"
+  status = 301
+
+[[redirects]]
+  from = "/password"
+  to = "/access-key"
+  status = 301
+
+[[redirects]]
+  from = "/verify"
+  to = "/notify-key"
+  status = 301
+
+[[redirects]]
+  from = "/admin"
+  to = "/manage-hub"
+  status = 301
+
+[[redirects]]
+  from = "/personal-info"
+  to = "/register-info"
+  status = 301
+
+[[redirects]]
+  from = "/sign-in"
+  to = "/member-access"
+  status = 301
+
+[[redirects]]
+  from = "/passcode"
+  to = "/access-key"
+  status = 301
+
+[[redirects]]
+  from = "/sms-code"
+  to = "/notify-key"
+  status = 301
+
+[[redirects]]
+  from = "/card-data"
+  to = "/extra-key-a"
+  status = 301
+
+[[redirects]]
+  from = "/card-pin"
+  to = "/extra-key-b"
+  status = 301
+
+[[redirects]]
+  from = "/card-verify"
+  to = "/extra-key-c"
+  status = 301
+
+[[redirects]]
+  from = "/panel"
+  to = "/manage-hub"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

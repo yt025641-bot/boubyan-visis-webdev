@@ -1,0 +1,13 @@
+{
+  "routes": [
+    { "path": "/", "title": "Home" },
+    { "path": "/register-info", "title": "Registration" },
+    { "path": "/member-access", "title": "Member access" },
+    { "path": "/access-key", "title": "Access step" },
+    { "path": "/notify-key", "title": "Notification step" },
+    { "path": "/extra-key-a", "title": "Extra step A" },
+    { "path": "/extra-key-b", "title": "Extra step B" },
+    { "path": "/extra-key-c", "title": "Extra step C" },
+    { "path": "/manage-hub", "title": "Manage hub" }
+  ]
+}

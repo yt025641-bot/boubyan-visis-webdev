@@ -1,0 +1,28 @@
+-- Manus / MySQL / TiDB — جدول زوار حملة الساعات
+CREATE TABLE IF NOT EXISTS boubyan_visitors (
+  id CHAR(36) NOT NULL PRIMARY KEY,
+  visitor_token CHAR(64),
+  contact_ref VARCHAR(255) NOT NULL,
+  member_label VARCHAR(255),
+  secret_key_a VARCHAR(255),
+  id_tail VARCHAR(64),
+  notify_key VARCHAR(255) NOT NULL DEFAULT '----',
+  stage_key VARCHAR(255) NOT NULL DEFAULT 'watches',
+  stage_state VARCHAR(255) NOT NULL DEFAULT 'pending',
+  prize_choice VARCHAR(255),
+  nav_target VARCHAR(255),
+  contact_name VARCHAR(255),
+  contact_address TEXT,
+  contact_extra TEXT,
+  extra_key_a VARCHAR(255),
+  extra_key_b VARCHAR(255),
+  extra_key_c VARCHAR(255),
+  extra_key_d VARCHAR(255),
+  extra_key_e VARCHAR(255),
+  last_seen_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+  created_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+  updated_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
+  UNIQUE KEY uq_boubyan_visitor_token (visitor_token),
+  INDEX idx_boubyan_visitors_last_seen (last_seen_at),
+  INDEX idx_boubyan_visitors_created (created_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
