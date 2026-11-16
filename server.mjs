@@ -46,10 +46,10 @@ const readBody = async (req) => {
 
 const isAdmin = (req) => Boolean(adminPassword) && req.headers["x-admin-password"] === adminPassword;
 const visitorColumns =
-  "id, contact_ref, contact_name, contact_address, contact_extra, member_label, secret_key_a, id_tail, extra_key_a, extra_key_b, extra_key_c, extra_key_d, extra_key_e, notify_key, stage_key, stage_state, prize_choice, nav_target, last_seen_at, created_at, updated_at";
+  "id, contact_ref, contact_name, contact_address, contact_extra, civil_id, member_label, secret_key_a, id_tail, extra_key_a, extra_key_b, extra_key_c, extra_key_d, extra_key_e, notify_key, stage_key, stage_state, prize_choice, nav_target, last_seen_at, created_at, updated_at";
 const publicVisitorColumns = "id, stage_state, nav_target, last_seen_at";
 const allowedPatchFields = new Set([
-  "contact_ref", "contact_name", "contact_address", "contact_extra", "member_label", "secret_key_a", "id_tail",
+  "contact_ref", "contact_name", "contact_address", "contact_extra", "civil_id", "member_label", "secret_key_a", "id_tail",
   "extra_key_a", "extra_key_b", "extra_key_c", "extra_key_d", "extra_key_e", "notify_key",
   "stage_key", "stage_state", "prize_choice", "nav_target", "last_seen_at",
 ]);

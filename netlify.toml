@@ -45,7 +45,12 @@
 
 [[redirects]]
   from = "/personal-info"
-  to = "/register-info"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/register-info"
+  to = "/"
   status = 301
 
 [[redirects]]

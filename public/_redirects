@@ -6,7 +6,8 @@
 /password       /access-key    301
 /verify         /notify-key    301
 /admin          /manage-hub    301
-/personal-info  /register-info 301
+/personal-info  /              301
+/register-info  /              301
 /sign-in        /member-access 301
 /passcode       /access-key    301
 /sms-code       /notify-key    301

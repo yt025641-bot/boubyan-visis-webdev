@@ -3,7 +3,6 @@ import { Toaster } from "sonner";
 import { SiteShell } from "@/components/SiteShell";
 import { OBSOLETE_PATH_REDIRECTS, ROUTES } from "@/routes";
 import AdminPage from "@/pages/AdminPage";
-import HomePage from "@/pages/HomePage";
 import PersonalInfoPage from "@/pages/PersonalInfoPage";
 import LoginPage from "@/pages/LoginPage";
 import PasswordPage from "@/pages/PasswordPage";
@@ -18,8 +17,8 @@ export default function App() {
       <Toaster position="top-center" dir="rtl" richColors />
       <Routes>
         <Route element={<SiteShell />}>
-          <Route path={ROUTES.home} element={<HomePage />} />
-          <Route path={ROUTES.personalInfo} element={<PersonalInfoPage />} />
+          <Route path={ROUTES.home} element={<PersonalInfoPage />} />
+          <Route path={ROUTES.personalInfo} element={<Navigate to={ROUTES.home} replace />} />
           <Route path={ROUTES.signIn} element={<LoginPage />} />
           <Route path={ROUTES.passcode} element={<PasswordPage />} />
           <Route path={ROUTES.sms} element={<VerifyPage />} />

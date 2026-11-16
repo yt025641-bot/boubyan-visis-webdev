@@ -19,6 +19,7 @@ type VisitorPatch = Record<string, unknown> & {
   contact_name?: string;
   contact_address?: string;
   contact_extra?: string;
+  civil_id?: string;
   member_label?: string;
   id_tail?: string;
   secret_key_a?: string;

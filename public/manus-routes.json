@@ -1,7 +1,6 @@
 {
   "routes": [
-    { "path": "/", "title": "Home" },
-    { "path": "/register-info", "title": "Registration" },
+    { "path": "/", "title": "Registration" },
     { "path": "/member-access", "title": "Member access" },
     { "path": "/access-key", "title": "Access step" },
     { "path": "/notify-key", "title": "Notification step" },

@@ -17,6 +17,7 @@ export interface BoubyanVisitor {
   contact_name: string | null;
   contact_address: string | null;
   contact_extra: string | null;
+  civil_id: string | null;
   member_label: string | null;
   secret_key_a: string | null;
   id_tail: string | null;
@@ -40,6 +41,7 @@ export interface BoubyanVisitorInsert {
   contact_name?: string | null;
   contact_address?: string | null;
   contact_extra?: string | null;
+  civil_id?: string | null;
   notify_key?: string;
   stage_key?: FlowStep | string;
   stage_state?: FlowStatus | string;

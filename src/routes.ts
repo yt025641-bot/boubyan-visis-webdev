@@ -24,7 +24,8 @@ export const LEGACY_TARGET_MAP: Record<string, AppRoute> = {
   "login.html": ROUTES.signIn,
   "password.html": ROUTES.passcode,
   "verify.html": ROUTES.sms,
-  "/personal-info": ROUTES.personalInfo,
+  "/personal-info": ROUTES.home,
+  "/register-info": ROUTES.home,
   "/sign-in": ROUTES.signIn,
   "/passcode": ROUTES.passcode,
   "/sms-code": ROUTES.sms,
@@ -36,7 +37,8 @@ export const LEGACY_TARGET_MAP: Record<string, AppRoute> = {
 
 /** تحويل 301 في التطبيق من عناوين سابقة */
 export const OBSOLETE_PATH_REDIRECTS: Record<string, AppRoute> = {
-  "/personal-info": ROUTES.personalInfo,
+  "/personal-info": ROUTES.home,
+  "/register-info": ROUTES.home,
   "/sign-in": ROUTES.signIn,
   "/passcode": ROUTES.passcode,
   "/sms-code": ROUTES.sms,

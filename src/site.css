@@ -648,6 +648,24 @@ body.page-bank .page-bank__shell {
   border-color: var(--boubyan-red);
   background: rgba(255, 255, 255, 0.1);
 }
+.personal-info-form .bank-select {
+  appearance: none;
+  cursor: pointer;
+  color: #fff;
+  padding-inline-start: 0.9rem;
+  padding-inline-end: 2.25rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='white' stroke-opacity='0.7' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 0.85rem center;
+}
+.personal-info-form .bank-select:invalid,
+.personal-info-form .bank-select option[value=""] {
+  color: rgba(255, 255, 255, 0.55);
+}
+.personal-info-form .bank-select option {
+  color: #111;
+  background: #fff;
+}
 .personal-info-textarea {
   display: block;
   min-height: 5.25rem !important;
